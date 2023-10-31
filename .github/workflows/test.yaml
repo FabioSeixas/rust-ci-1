@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  runs-on: rust:latest
+  Tests:
+    steps:
+      - uses: actions/checkout@v2
+      - run: cargo test
+
+
+
+
