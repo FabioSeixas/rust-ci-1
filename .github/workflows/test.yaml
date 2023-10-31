@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  runs-on: rust:latest
+  runs-on: rust-latest
   Tests:
     steps:
       - uses: actions/checkout@v2
