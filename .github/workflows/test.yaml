@@ -1,9 +1,11 @@
+name: typecheck and tests
+
 on: [push]
 
 jobs:
-  runs-on:
-    - ubuntu-latest
-  Typecheck:
+  typecheck:
+    name: cargo check
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -14,7 +16,10 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: check
-  Tests:
+
+  test:
+    name: cargo test
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
