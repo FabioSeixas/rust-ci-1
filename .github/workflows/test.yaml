@@ -1,7 +1,8 @@
 on: [push]
 
 jobs:
-  runs-on: ubuntu-latest
+  runs-on:
+    - ubuntu-latest
   Typecheck:
     steps:
       - uses: actions/checkout@v2
