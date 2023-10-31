@@ -8,6 +8,6 @@ fn sum(a: usize, b: usize) -> usize {
 
 #[test]
 fn it_works() {
-    let result = sum(2, 2);
+    let result = sum(2, 3);
     assert_eq!(result, 4);
 }
